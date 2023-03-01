@@ -1,15 +1,6 @@
-# Product Description Tool README
+# Product Description Tool
 
 A simple tool to help the product team streamline product description creation. Built by Nate Kerber, 2023.
-
-## Table of Contents
-
-- [Product Description Tool README](#product-description-tool-readme)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Support](#support)
-  - [Contributing](#contributing)
 
 ## Installation
 
