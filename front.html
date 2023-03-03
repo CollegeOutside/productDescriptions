@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Product Description Creator</title>
+  <script src="jquery-3.6.3.min.js"></script>
+  <script src="logic.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="largeColumn">
+      <div>
+        <p>Input the <b>product description</b> here:</p>
+        <textarea id="desc-txt"></textarea>
+      </div>
+      <div>
+        <p>Input the <b>technical specifications</b> here:</p>
+        <textarea id="specs-txt" placeholder="Leave blank if none"></textarea>
+        </p>
+      </div>
+      <div>
+        <p>Input any <b>other features</b> here:</p>
+        <textarea id="features-txt" placeholder="Leave blank if none"></textarea>
+      </div>
+    </div>
+    <div class="largeColumn">
+      <div>
+        <div class="container" id="rawTitle">
+          <p class="smallColumn">Raw HTML:</p>
+          <div class="smallColumn" id="buttonCol"><button id="copyHTML">Copy HTML code</button></div>
+        </div>
+        <textarea id="raw-html"></textarea>
+      </div>
+      <div>
+        <p>Live text preview:</p>
+        <div id="demo-html" class="display"></div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

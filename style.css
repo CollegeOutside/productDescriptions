@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.largeColumn {
+    flex: 1;
+    padding: 10px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px;
+}
+
+textarea, .display {
+    width:95%;
+    border: 2px solid darkgray;
+    background-color: rgb(245, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+.display {
+    min-height: 75px;
+}
+
+#demo-html {
+    max-height:350px;
+    padding-right: 10px;
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+    min-height:125px;
+}
+
+#raw-html {
+    min-height: 75px;
+    max-height: 75px;
+}
+
+.smallColumn {
+    flex: 1;
+}
+
+#buttonCol {
+    text-align: right;
+}
