@@ -16,7 +16,6 @@ $(document).ready(() => {
 
     //Update Description
     descBox.on('input', (e) => {
-        //console.log("Description changed to: " + e.target.value);
         desc = e.target.value; // set the description to the value in the textarea
         updateHTML();
     });
@@ -24,19 +23,22 @@ $(document).ready(() => {
     //Update spec list
     specBox.on('input', (e) => {
         let specs = e.target.value;
-        //console.log("Specs changed to: " + specs);
         if (specs.length > 0) { // make sure the spec list is not empty
             spec = "<br><br><b>Technical Specifications:</b><ul>"; // add the title
             const spec_arr = e.target.value.split("\n");
             spec_arr.forEach((item) => { 
                 spec += "<li>";
-                if(boldSpecTitles) { // if we're using the "bold spec titles" option, do the following
+                // if we're using the "bold spec titles" option, do the following
+                // @TODO build out an HTML checkbox for bold specification titles option?
+
+                if(boldSpecTitles) { 
                     let index = item.indexOf(":"); // find the index of the colon,
                     let [title, value] = [item.slice(0, index+1), item.slice(index + 1)]; // then split on it
-                    spec+="<b>"+title+"</b>"; // bold the title
+                    spec+=`<b>${title}</b>`; // bold the title
                     spec+=value;
                 } else {
-                    spec+= item; // if the option is turned off, don't do anything
+                    // if the option is turned off, don't do anything
+                    spec+= item; 
                 }
                 spec += "</li>";
             });
@@ -51,13 +53,13 @@ $(document).ready(() => {
     //Update feature list
     featBox.on('input', (e) => {
         let features = e.target.value;
-        //console.log("Features changed to: " + features);
-
-        if (features.length > 0) { // make sure the feature list is not empty
+        // make sure the feature list is not empty
+        if (features.length > 0) {
             const feature_arr = e.target.value.split("\n");
-            ft = "<br><br><b>Other Features:</b><ul>";
+            ft = "<b>Other Features:</b><ul>";
             feature_arr.forEach((item) => { 
-                ft += "<li>" + item + "</li>"; // for each feature in the box, add it to the HTML list
+                // for each feature in the box, add it to the HTML list
+                ft += `<li>${item}</li>`; 
             });
             ft += "</ul>";
         } else {
@@ -79,13 +81,3 @@ $(document).ready(() => {
         demoBox.html(full);
     };
 })
-
-
-
-/*
-every time someone changes specs or product:
-check if the box is blank, if so, remove that section
-if it is not blank, add that section
-restructure 
-
-*/
